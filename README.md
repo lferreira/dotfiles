@@ -1,0 +1,2 @@
+# dotfiles
+My essential configuration

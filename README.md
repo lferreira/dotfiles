@@ -1,12 +1,14 @@
-# Luiz's dotfiles
+## Luiz's dotfiles
 
 Warning: If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
 
-# How to install
+### Git-free install
 
-## Git-free install
-
+```
 cd; curl -L https://github.com/lferreira/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,install.sh,.osx,LICENSE-MIT.txt}
+```
+
+### How to install
 
 ```
 make env/install

@@ -1,0 +1,90 @@
+[alias]
+	a = add
+	b = branch -v
+	amend = commit --amend
+	d = diff
+	co = checkout
+	ci = commit
+	br = branch
+
+	# View abbreviated SHA, description, and history graph of the latest 20 commits
+	l = log
+
+	changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
+	short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
+	shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
+	
+	# View the current working tree status using the short format
+	s = status --short
+
+	# Normal status
+	st = status
+
+  	lastday = log --author=__user_name__ --pretty=oneline --all --since=1.day
+  	lastfriday = log --author=__user_name__ --pretty=oneline --all --since='last Friday'
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+[apply]
+	# Detect whitespace errors when applying a patch
+	whitespace = fix
+[core]
+  	autocrlf = false
+  	editor = vim -f
+  	excludesfile = ~/.gitignore
+  	excludesfile = ~/.gitattributes
+
+	# Speed up commands involving untracked files such as `git status`.
+	# https://git-scm.com/docs/git-update-index#_untracked_cache
+	untrackedCache = true
+[color]
+	# Use colors in Git commands that are capable of colored output when
+	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+	ui = auto
+
+[color "branch"]
+
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+
+	meta = yellow bold
+	frag = magenta bold # line info
+	old = red # deletions
+	new = green # additions
+
+[color "status"]
+
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[commit]
+
+	# https://help.github.com/articles/signing-commits-using-gpg/
+	gpgsign = true
+
+[diff]
+
+	# Detect copies as well as renames
+	renames = copies
+
+[diff "bin"]
+
+	# Use `hexdump` to diff binary files
+	textconv = hexdump -v -C
+
+[push]
+	default = matching
+
+[url "https://"]
+	insteadOf = git://
+
+[grep]
+	extendRegexp = true
+	lineNumber = true
+
+[fetch]
+    prune = true

@@ -1,3 +1,5 @@
+.PHONY : applications/vim
+
 # Configuration
 user-nick = $(USER)
 golang-version = $(GO_VERSION)

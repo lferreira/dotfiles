@@ -1,5 +1,24 @@
 #!/usr/bin/env bash
 
+# 
+if [ -z "$GO_VERSION"]
+then
+  echo "Enter Golang version. Ex: 1.10"
+  read input_version
+  export GO_VERSION=$input_version
+fi
+
+# Golang version
+if [ -z "$GO_VERSION"]
+then
+  echo "Enter Golang version. Ex: 1.10"
+  read input_version
+  export GO_VERSION=$input_version
+fi
+
+# Install brew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 # Install command-line tools using Homebrew.
 
 # Make sure we’re using the latest Homebrew.

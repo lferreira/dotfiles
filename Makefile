@@ -9,7 +9,7 @@ env/install:
 	./brew.sh
 	./install.sh
 	./install-extras.sh
-	applications/vim
+	@$(MAKE) applications/vim
 
 applications/vim: ~/.vimrc
 	rm -rf $(VIM_PATH)/pack

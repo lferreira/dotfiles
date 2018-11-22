@@ -5,7 +5,7 @@ Warning: If you want to give these dotfiles a try, you should first fork this re
 ### Git-free install
 
 ```
-cd; curl -L https://github.com/lferreira/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,install.sh,.osx,LICENSE-MIT.txt}
+cd; curl -L https://github.com/lferreira/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,.osx,LICENSE-MIT.txt}
 ```
 
 ### How to install

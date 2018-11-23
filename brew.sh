@@ -53,6 +53,12 @@ brew install grep
 brew install openssh
 brew install screen
 
+# Install f.lux
+brew cask install flux
+
+# Install Slack
+brew cask install slack
+
 # Install font tools.
 brew tap bramstein/webfonttools
 brew install sfnt2woff

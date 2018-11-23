@@ -108,6 +108,9 @@ brew install zopfli
 brew cask install iterm2
 brew install zsh && chsh -s /bin/zsh
 
+# Oh my ZSH - robbyrussel
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 brew install go@${GO_VERSION}
 brew install kubernetes-cli
 brew install librdkafka

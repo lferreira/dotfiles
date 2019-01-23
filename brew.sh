@@ -52,7 +52,10 @@ brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
+
+# Install some utils
 brew install gettext
+brew install jq
 
 # Install f.lux
 brew cask install flux

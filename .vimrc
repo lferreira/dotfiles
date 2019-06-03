@@ -84,3 +84,13 @@ let g:go_fmt_autosave = 1
 let g:markdown_minlines = 100
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'scala', 'go']
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+" ##################
+" vim-javascript configuration
+" ##################
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
+augroup javascript_folding
+    au!
+    au FileType javascript setlocal foldmethod=syntax
+augroup END

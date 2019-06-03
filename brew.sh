@@ -113,6 +113,10 @@ brew install tree
 brew install vbindiff
 brew install zopfli
 
+# Tmate
+brew install tmux
+brew install reattach-to-user-namespace
+brew install tmate
 
 # Terminal Tools
 brew cask install iterm2

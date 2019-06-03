@@ -8,7 +8,6 @@ VIM_PATH = ~/.vim
 env/install: 
 	./brew.sh
 	./install.sh
-	./install-extras.sh
 	@$(MAKE) applications/vim
 
 applications/vim: ~/.vimrc
@@ -24,4 +23,5 @@ applications/vim: ~/.vimrc
 		&& git clone https://github.com/tpope/vim-sensible.git \
 		&& git clone https://github.com/tpope/vim-sleuth.git \
 		&& git clone https://github.com/tpope/vim-surround.git \
-		&& git clone https://github.com/tpope/vim-vinegar.git
+		&& git clone https://github.com/tpope/vim-vinegar.git \
+		&& git clone https://github.com/pangloss/vim-javascript 

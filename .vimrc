@@ -2,6 +2,7 @@
 nmap <c-s> :w<cr>
 imap <c-s> <esc>:w<cr>a
 
+
 " ================ General Config ====================
 
 set fileencoding=utf-8
@@ -42,9 +43,9 @@ set undodir=~/.vim/backups
 set undofile
 
 " ================ Appearence Config ================
-
-let base16colorspace=256
+syntax enable
 set t_Co=256
+let g:solarized_termcolors=256
 set background=dark
 colorscheme base16-solarized-dark
 
@@ -85,12 +86,6 @@ let g:markdown_minlines = 100
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'scala', 'go']
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-" ##################
-" vim-javascript configuration
-" ##################
-let g:javascript_plugin_jsdoc = 1
-let g:javascript_plugin_flow = 1
-augroup javascript_folding
-    au!
-    au FileType javascript setlocal foldmethod=syntax
-augroup END
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType html       setlocal shiftwidth=2 tabstop=2
+autocmd FileType python     setlocal shiftwidth=4 softtabstop=4 expandtab

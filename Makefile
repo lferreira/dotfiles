@@ -24,4 +24,5 @@ applications/vim: ~/.vimrc
 		&& git clone https://github.com/tpope/vim-sleuth.git \
 		&& git clone https://github.com/tpope/vim-surround.git \
 		&& git clone https://github.com/tpope/vim-vinegar.git \
-		&& git clone https://github.com/pangloss/vim-javascript 
+		&& git clone https://github.com/pangloss/vim-javascript \
+		&& git clone https://github.com/alvan/vim-closetag

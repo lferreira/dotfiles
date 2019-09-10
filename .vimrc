@@ -89,3 +89,12 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType html       setlocal shiftwidth=2 tabstop=2
 autocmd FileType python     setlocal shiftwidth=4 softtabstop=4 expandtab
+
+
+" #################
+" Enable emmet just for html/css
+" ################
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+let g:user_emmet_leader_key='<C-Z>'

@@ -125,9 +125,14 @@ brew install zsh && chsh -s /bin/zsh
 # Oh my ZSH - robbyrussel
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# install Golang
 brew install go@${GO_VERSION}
 brew install kubernetes-cli
 brew install librdkafka
+
+# install NVM
+brew install nvm
+mkdir ~/.nvm
 
 # Remove outdated versions from the cellar.
 brew cleanup

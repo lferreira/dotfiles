@@ -1,5 +1,10 @@
+#!/bin/bash
+
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+
+source ~/.exports
+source ~/.alias
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -46,3 +51,16 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+# Enabled Ctrl+s to save
+stty start undef
+stty stop undef
+setopt noflowcontrol
+
+[[ -s "/Users/luiz.ferreira/.gvm/scripts/gvm" ]] && source "/Users/luiz.ferreira/.gvm/scripts/gvm"
+
+# nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+

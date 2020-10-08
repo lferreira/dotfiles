@@ -116,10 +116,11 @@ brew install tree
 brew install vbindiff
 brew install zopfli
 
-# Tmate
+# Wemux
 brew install tmux
 brew install reattach-to-user-namespace
 brew install tmate
+brew install wemux
 
 # Terminal Tools
 brew cask install iterm2
@@ -132,6 +133,9 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 brew install go@${GO_VERSION}
 brew install kubernetes-cli
 brew install librdkafka
+
+# install GVM
+brew install gvm
 
 # install NVM
 brew install nvm

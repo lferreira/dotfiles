@@ -129,6 +129,3 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
 
     sith
 fi
-
-# Automatically start the client in pair mode but allow them to detach.
-wemux pair

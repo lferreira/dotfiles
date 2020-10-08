@@ -61,11 +61,6 @@
 	changed = green
 	untracked = cyan
 
-[commit]
-
-	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
-
 [diff]
 
 	# Detect copies as well as renames
@@ -79,12 +74,17 @@
 [push]
 	default = matching
 
-[url "https://"]
-	insteadOf = git://
-
 [grep]
 	extendRegexp = true
 	lineNumber = true
 
 [fetch]
     prune = true
+
+[user]
+	name = luiz.ferreira
+	email = luizhgferreira@gmail.com
+[gpg]
+	program = /usr/local/bin/gpg
+[url "git@github.com:"]
+	insteadOf = https://github.com/

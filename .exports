@@ -3,6 +3,8 @@
 # Make vim the default editor.
 export EDITOR='vim';
 
+export PATH_TO_PROJECTS="$HOME/workspace"
+
 # Enable persistent REPL history for `node`.
 export NODE_REPL_HISTORY=~/.node_history;
 # Allow 32³ entries; the default is 1000.
@@ -32,3 +34,8 @@ export MANPAGER='less -X';
 # Avoid issues with `gpg` as installed via Homebrew.
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty);
+
+# This should be the last line of the file
+# For local changes
+# Don't make edits below this
+[ -f ".exports.local" ] && source ".exports.local"

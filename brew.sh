@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Install command-line tools using Homebrew.
+
+. "$( pwd )/utils.exclude.sh"
+
 # Golang version
 if [ -z "$GO_VERSION" ]
 then
@@ -9,9 +13,14 @@ then
 fi
 
 # Install brew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Install command-line tools using Homebrew.
+which brew 1>&/dev/null
+if [ ! "$?" -eq 0 ] ; then
+	echo_with_prompt "Homebrew not installed. Attempting to install Homebrew"
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	if [ ! "$?" -eq 0 ] ; then
+		echo_with_prompt "Something went wrong. Exiting..." && exit 1
+	fi
+fi
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -100,7 +109,6 @@ brew install xz
 
 # Install other useful binaries.
 brew install ack
-#brew install exiv2
 brew install git
 brew install git-lfs
 brew install imagemagick
@@ -128,10 +136,15 @@ brew install zsh && chsh -s /bin/zsh
 # Oh my ZSH - robbyrussel
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# install Golang
+# Golang
 brew install go@${GO_VERSION}
 brew install kubernetes-cli
-brew install librdkafka
+
+# Node 
+brew install node
+
+# Python
+brew install python
 
 # install NVM
 brew install nvm

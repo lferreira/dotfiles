@@ -138,13 +138,21 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 # Golang
 brew install go@${GO_VERSION}
+
+# kubectl
 brew install kubernetes-cli
+
+# kubectx
+brew install kubectx
 
 # Node 
 brew install node
 
 # Python
 brew install python
+
+brew install pipx
+pipx ensurepath
 
 # install NVM
 brew install nvm

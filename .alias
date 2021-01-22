@@ -1,2 +1,4 @@
-#alias s2a="function(){eval $( $(command saml2aws) script --shell=bash --profile=$@);}"
 alias reload_dot='source .bash_profile'
+
+alias kcx=kubectx
+alias kcl=kubectl

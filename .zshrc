@@ -126,3 +126,5 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
 
     sith
 fi
+
+source ~/.bash_profile

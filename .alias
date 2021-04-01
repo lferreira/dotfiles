@@ -1,4 +1,9 @@
-alias reload_dot='source .bash_profile'
-
 alias kcx=kubectx
 alias kcl=kubectl
+alias ggrep='_ggrep(){ git grep "$@" -- . :\!vendor;}; _ggrep'
+
+# This should be the last line of the file
+# For local changes
+# Don't make edits below this
+[ -f "$HOME/.alias.local" ] && source "$HOME/.alias.local"
+

@@ -84,7 +84,15 @@ let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
 let g:markdown_minlines = 100
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'scala', 'go']
+let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+if exists("g:did_load_filetypes")
+  filetype off
+  filetype plugin indent off
+endif
+set rtp+=~/.vim/godoctor.vim
+filetype plugin indent on
+syntax on
 
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType html       setlocal shiftwidth=2 tabstop=2

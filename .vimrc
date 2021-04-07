@@ -43,6 +43,7 @@ set undodir=~/.vim/backups
 set undofile
 
 " ================ Appearence Config ================
+set encoding=utf-8
 syntax enable
 set t_Co=256
 let g:solarized_termcolors=256
@@ -52,12 +53,6 @@ colorscheme base16-solarized-dark
 " Statusbar
 set statusline=\ %f\  " Filename
 set statusline+=%{fugitive#statusline()} " Git info
-set statusline+=%= " Separator
-set statusline+=%y " File type
-set statusline+=[%{strlen(&fenc)?&fenc:'none'}] " File encoding
-set statusline+=[%{&ff}] " File ending
-set statusline+=\ %P\ of\ %L\  " Perc. file
-set statusline+=(%l\:%c)\ " Line info
 " Column ruler
 set colorcolumn=120
 

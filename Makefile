@@ -16,7 +16,7 @@ applications/vim: ~/.vimrc
 	cd $(VIM_PATH)/pack/plugins/start \
 		&& git clone https://github.com/chriskempson/base16-vim.git \
 		&& git clone https://github.com/fatih/vim-go.git \
-		&& git clone https://github.com/godoctor/godoctor.vim ~/.vim/godoctor.vim \
+		&& git clone https://github.com/godoctor/godoctor.vim \
 		&& git clone https://github.com/tpope/vim-fugitive.git \
 		&& git clone https://github.com/tpope/vim-markdown.git \
 		&& git clone https://github.com/tpope/vim-repeat.git \

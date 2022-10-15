@@ -27,4 +27,7 @@ applications/vim: ~/.vimrc
 		&& git clone https://github.com/tpope/vim-vinegar.git \
 		&& git clone https://github.com/pangloss/vim-javascript \
 		&& git clone https://github.com/alvan/vim-closetag \
-		&& git clone https://github.com/mattn/emmet-vim 
+		&& git clone https://github.com/mattn/emmet-vim \
+		&& git clone https://github.com/preservim/nerdcommenter.git \
+		&& git clone https://github.com/neoclide/coc.nvim \
+		&& git clone https://github.com/dyng/ctrlsf.vim

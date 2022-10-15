@@ -34,6 +34,9 @@ set noswapfile
 set nobackup
 set nowb
 
+nnoremap H gT
+nnoremap L gt
+
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
@@ -75,11 +78,13 @@ let g:syntastic_quiet_warnings=0
 " ##################
 " Language Specifics
 " ##################
+" golang
 let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
 let g:markdown_minlines = 100
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'scala', 'go']
 let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+let g:go_auto_type_info = 1 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 if exists("g:did_load_filetypes")
   filetype off
@@ -98,7 +103,7 @@ autocmd FileType python     setlocal shiftwidth=4 softtabstop=4 expandtab
 " #######
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-let g:user_emmet_leader_key=','
+let g:user_emmet_leader_key='<c-y,>'
 let g:user_emmet_settings = {
 \  'html' : {
 \      'snippets' : {

@@ -28,14 +28,14 @@ end
 
 -- add list of plugins to install
 return packer.startup(function(use)
-	-- Configurations will go here
+	-- configurations will go here
 	use("wbthomason/packer.nvim")
 
-	-- Hrsh7th Code Completion Suite
+	-- hrsh7th Code Completion Suite
 	use("hrsh7th/cmp-nvim-lua")
 	use("hrsh7th/cmp-nvim-lsp-signature-help")
 
-	-- File explorer tree
+	-- file explorer tree
 	use({
 		"nvim-tree/nvim-tree.lua",
 		requires = {
@@ -43,8 +43,7 @@ return packer.startup(function(use)
 		},
 	})
 
-	-- Nord theme for styling  https://github.com/shaunsingh/nord.nvim
-	use("shaunsingh/nord.nvim")
+	use("shaunsingh/nord.nvim") -- preferred colorscheme
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 

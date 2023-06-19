@@ -1,6 +1,7 @@
 require("luiz.plugins-setup")
+require("luiz.core.global")
 require("luiz.core.options")
-require("luiz.core.keymaps")
+require("luiz.core.colorscheme")
 require("luiz.core.keymaps")
 require("luiz.plugins.nvim-tree")
 require("luiz.plugins.lualine")

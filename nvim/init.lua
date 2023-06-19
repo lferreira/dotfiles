@@ -12,6 +12,7 @@ require("luiz.plugins.lsp.null-ls")
 require("luiz.plugins.nvim-cmp")
 require("luiz.plugins.autopairs")
 require("luiz.plugins.treesitter")
+require("luiz.plugins.toggleterm")
 require("luiz.plugins.gitsigns")
 require("luiz.plugins.lsp.go")
 

@@ -33,3 +33,7 @@ require("go").setup({
 	-- quick type
 	quick_type_flags = { "--just-types" },
 })
+
+require("go").config.update_tool("quicktype", function(tool)
+	tool.pkg_mgr = "yarn"
+end)

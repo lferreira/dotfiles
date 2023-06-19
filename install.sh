@@ -2,27 +2,20 @@
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-git pull origin master;
+git clone git@github.com:lferreira/dotfiles.git ~/.dotfiles && cd ~/.dotfiles || exit
 
-function doIt() {
-	rsync --exclude ".git/" \
-		--exclude ".DS_Store" \
-		--exclude ".osx" \
-		--exclude "install.sh" \
-		--exclude "README.md" \
-		--exclude "LICENSE-MIT.txt" \
-		-avh --no-perms . ~;
-	source ~/.bash_profile;
-}
+# creates an .config directory
+mkdir ~/.config
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
-	doIt;
-else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
-	echo "";
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		doIt;
-	fi;
-fi;
+# creates a symbolyc link with ~/.config/nvim
+ln -s ~/.dotfiles/nvim ~/.config/nvim
 
-unset install;
+go install github.com/incu6us/goimports-reviser/v3@latest 
+go install mvdan.cc/gofumpt@latest
+go install github.com/segmentio/golines@latest
+
+vim +PlugInstall +qall
+
+echo "Installing Neovim plugins ..."
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+

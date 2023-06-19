@@ -1,14 +1,27 @@
 local opt = vim.opt -- for conciseness
 
+-- disable nvim intro
+opt.shortmess:append("sI")
+
+opt.laststatus = 3 -- global statusline
+
 -- line numbers
 opt.relativenumber = false -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
+opt.undofile = true
 
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
+opt.softtabstop = 2
 opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
+opt.smartindent = true
+
+opt.fillchars = { eob = " " }
+opt.ignorecase = true
+opt.smartcase = true
+opt.mouse = "a"
 
 -- line wrapping
 opt.wrap = false -- disable line wrapping
@@ -37,5 +50,11 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 -- split windows
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
+
+opt.signcolumn = "yes"
+opt.timeoutlen = 400
+
+-- interval for writing swap file to disk, also used by gitsigns
+opt.updatetime = 250
 
 opt.iskeyword:append("-") -- consider string-string as whole word

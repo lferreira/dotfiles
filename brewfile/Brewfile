@@ -2,7 +2,7 @@
 cask_args appdir: '/Applications'
 
 # install packages
-brew 'vim'
+brew 'nvim'
 brew 'grep'
 brew 'jq'
 
@@ -24,7 +24,7 @@ brew 'tmux'
 brew 'tmate'
 
 # languages
-brew 'go'
+brew 'golang'
 brew 'python'
 brew 'pipx'
 brew 'node'
@@ -39,6 +39,5 @@ brew 'gvm'
 
 # casks
 cask 'docker'
-cask 'flux'
 cask 'iterm2'
 

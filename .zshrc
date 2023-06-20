@@ -127,4 +127,8 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
     sith
 fi
 
+if [ -f $(brew --prefix)/etc/brew-wrap ];then
+  source $(brew --prefix)/etc/brew-wrap
+fi
+
 source ~/.bash_profile

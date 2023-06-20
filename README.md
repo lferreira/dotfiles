@@ -11,7 +11,7 @@ cd; curl -L https://github.com/lferreira/dotfiles/tarball/master | tar -xzv --st
 ### How to install
 
 ```
-make env/install
+make osx/install
 ```
 
 ### Add custom commands without creating a new fork

@@ -11,11 +11,10 @@ require("luiz.plugins.lsp.lspconfig")
 require("luiz.plugins.lsp.null-ls")
 require("luiz.plugins.nvim-cmp")
 require("luiz.plugins.autopairs")
-require("luiz.plugins.treesitter")
 require("luiz.plugins.toggleterm")
+require("luiz.plugins.treesitter")
 require("luiz.plugins.gitsigns")
 require("luiz.plugins.lsp.go")
-
 -- Run gofmt + goimport on save
 
 --local format_sync_grp = vim.api.nvim_create_augroup("GoImport", {})

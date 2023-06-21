@@ -6,7 +6,7 @@
 which brew 1>&/dev/null
 if [ ! "$?" -eq 0 ] ; then
 	echo_with_prompt "Homebrew not installed. Attempting to install Homebrew"
-	/usr/bin/ruby -e "$(curl -o brewinstall.sh -fsSL https://raw.github.com/rcmdnk/homebrew-file/install/install.sh)"
+	/usr/bin/ruby -e "$(curl -o brewinstall.sh -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 	chmod 755 ./brewinstall.sh
 	rm -f brewinstall
 	if [ ! "$?" -eq 0 ] ; then
@@ -14,9 +14,22 @@ if [ ! "$?" -eq 0 ] ; then
 	fi
 fi
 
+brew doctor
+
+# installing xcode
+xcode-select --install
+
+brew update
+
+# installing git
+brew install git
+
 cd "$(dirname "${BASH_SOURCE}")";
 
 git clone git@github.com:lferreira/dotfiles.git ~/.dotfiles && cd ~/.dotfiles || exit
+
+# copying .files
+rsync -vt ~/.dotfiles/.* ~/
 
 # creates an .config directory
 mkdir ~/.config
@@ -34,12 +47,15 @@ fi;
 
 cd ~/.config/brewfile/
 
-brew file install
+brew bundle install
 
 chsh -s /bin/zsh
 
 # Oh my ZSH - robbyrussel
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# installing gvm - golang version manager
+zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 
 # install tmux package manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -57,4 +73,3 @@ vim +PlugInstall +qall
 
 echo "Installing Neovim plugins ..."
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-

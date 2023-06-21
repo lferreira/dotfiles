@@ -1,6 +1,11 @@
 # specify a directory to install
 cask_args appdir: '/Applications'
 
+# osx
+tap "homebrew/cask"
+tap "buo/cask-upgrade"
+brew "mas"
+
 # install packages
 brew 'nvim'
 brew 'grep'
@@ -17,6 +22,8 @@ brew 'zsh'
 # Install other useful binaries.
 brew 'git'
 brew 'git-lfs'
+brew 'gh'
+brew 'github-keygen'
 brew 'lua'
 
 # Tmate
@@ -25,8 +32,6 @@ brew 'tmate'
 
 # languages
 brew 'golang'
-brew 'python'
-brew 'pipx'
 brew 'node'
 
 # k8s
@@ -35,7 +40,6 @@ brew 'kubectx'
 
 # version managers
 brew 'nvm'
-brew 'gvm'
 
 # casks
 cask 'docker'

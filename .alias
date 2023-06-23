@@ -6,4 +6,3 @@ alias ggrep='_ggrep(){ git grep "$@" -- . :\!vendor;}; _ggrep'
 # For local changes
 # Don't make edits below this
 [ -f "$HOME/.alias.local" ] && source "$HOME/.alias.local"
-

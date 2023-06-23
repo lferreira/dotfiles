@@ -13,7 +13,7 @@
 	changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
 	short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
 	shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
-	
+
 	# View the current working tree status using the short format
 	s = status --short
 

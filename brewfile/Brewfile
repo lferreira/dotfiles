@@ -48,4 +48,3 @@ brew 'nvm'
 # casks
 cask 'docker'
 cask 'iterm2'
-

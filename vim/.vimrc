@@ -65,7 +65,7 @@ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-" ===== SYNTASTIC 
+" ===== SYNTASTIC
 "mark syntax errors with :signs
 let g:syntastic_enable_signs=1
 "automatically jump to the error when saving the file
@@ -84,7 +84,7 @@ let g:go_fmt_autosave = 1
 let g:markdown_minlines = 100
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'scala', 'go']
 let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
-let g:go_auto_type_info = 1 
+let g:go_auto_type_info = 1
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 if exists("g:did_load_filetypes")
   filetype off
@@ -111,7 +111,7 @@ let g:user_emmet_settings = {
 \                    ."<html lang=\"${lang}\">\n"
 \                    ."<head>\n"
 \                    ."\t<meta charset=\"${charset}\">\n"
-\		     ."\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"	
+\		     ."\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"
 \                    ."\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n"
 \                    ."\t<title></title>\n"
 \                    ."\t<link href=\"\">\n"

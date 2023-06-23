@@ -19,7 +19,7 @@ execute_func_with_prompt() {
 
   # TODO this feels like a hack honestly :p
   # See if there is a better way than just "$1" the function
- 
+
 	echo_with_prompt "This utility will $2"
 	echo_with_prompt "Proceed? (y/n)"
 	read resp

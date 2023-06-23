@@ -34,6 +34,9 @@ brew 'tmate'
 brew 'golang'
 brew 'node'
 
+# lualinter
+brew 'stylua'
+
 # k8s
 brew 'kubernetes-cli'
 brew 'kubectx'

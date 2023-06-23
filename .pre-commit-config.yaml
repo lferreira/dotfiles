@@ -8,4 +8,4 @@ repos:
   - repo: https://github.com/JohnnyMorganz/StyLua
     rev: v0.18.0
     hooks:
-      - id: stylua
+      - id: stylua-github

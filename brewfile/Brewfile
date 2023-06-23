@@ -24,7 +24,11 @@ brew 'git'
 brew 'git-lfs'
 brew 'gh'
 brew 'github-keygen'
+brew 'pre-commit'
 brew 'lua'
+
+# lualinter
+brew 'stylua'
 
 # Tmate
 brew 'tmux'
@@ -33,9 +37,6 @@ brew 'tmate'
 # languages
 brew 'golang'
 brew 'node'
-
-# lualinter
-brew 'stylua'
 
 # k8s
 brew 'kubernetes-cli'

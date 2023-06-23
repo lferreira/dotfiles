@@ -9,4 +9,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 					version: latest
-          args: --check nvim/
+					args: --check nvim/

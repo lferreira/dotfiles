@@ -134,6 +134,9 @@ return packer.startup(function(use)
 	-- nvim-go
 	use("crispgm/nvim-go")
 
+	-- pomodoro
+	use({ "wthollingsworth/pomodoro.nvim", requires = "MunifTanjim/nui.nvim" })
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

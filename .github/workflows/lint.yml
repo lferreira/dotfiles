@@ -8,5 +8,5 @@ jobs:
       - uses: JohnnyMorganz/stylua-action@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          args: --check nvim/
+          args: --check .
           version: latest

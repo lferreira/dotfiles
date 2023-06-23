@@ -15,13 +15,3 @@ require("luiz.plugins.toggleterm")
 require("luiz.plugins.treesitter")
 require("luiz.plugins.gitsigns")
 require("luiz.plugins.lsp.go")
--- Run gofmt + goimport on save
-
---local format_sync_grp = vim.api.nvim_create_augroup("GoImport", {})
---vim.api.nvim_create_autocmd("BufWritePre", {
---	pattern = "*.go",
---	callback = function()
---		require("gopls").goimport()
---	end,
---	group = format_sync_grp,
---})

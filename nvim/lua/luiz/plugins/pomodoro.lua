@@ -3,7 +3,7 @@ if not setup then
 	return
 end
 
-pomodo.setup({
+pomodoro.setup({
 	time_work = 25,
 	time_break_short = 5,
 	time_break_long = 20,

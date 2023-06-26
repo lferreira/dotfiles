@@ -2,9 +2,10 @@
 cask_args appdir: '/Applications'
 
 # osx
-tap "homebrew/cask"
-tap "buo/cask-upgrade"
-brew "mas"
+tap 'homebrew/cask'
+tap 'homebrew/cask/fonts'
+tap 'buo/cask-upgrade'
+brew 'mas'
 
 # install packages
 brew 'nvim'
@@ -48,3 +49,4 @@ brew 'nvm'
 # casks
 cask 'docker'
 cask 'iterm2'
+cask 'font-go-mono-nerd-font'

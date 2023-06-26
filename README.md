@@ -1,5 +1,16 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
+## Screenshot
+
+![screenshot](https://github.com/lferreira/dotfiles/assets/966489/ccfbd7f0-bfa5-42a1-a7c3-78f9da30dcde)
+
+## Requirements
+
+- [Neovim 0.8+](https://github.com/neovim/neovim/releases/tag/v0.8.1)
+- [packer.nvim](https://github.com/wbthomason/packer.nvim)
+- [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+
 ## Luiz's dotfiles
 
 Warning: If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!

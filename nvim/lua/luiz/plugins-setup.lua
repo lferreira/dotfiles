@@ -85,10 +85,11 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path") -- source for file system paths
 
 	-- snippets
-	use("hrsh7th/cmp-vsnip")
-	use("hrsh7th/vim-vsnip")
+	--  use "hrsh7th/cmp-vsnip"
+	--  use "hrsh7th/vim-vsnip"
 	use("saadparwaiz1/cmp_luasnip") -- Snippets source for nvim-cmp
 	use("L3MON4D3/LuaSnip") -- Snippets plugin
+	use("rafamadriz/friendly-snippets")
 
 	-- managing & installing lsp servers, linters & formatters
 	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
@@ -97,7 +98,6 @@ return packer.startup(function(use)
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 	use({
 		"smjonas/inc-rename.nvim",
@@ -136,6 +136,9 @@ return packer.startup(function(use)
 
 	-- pomodoro
 	use({ "wthollingsworth/pomodoro.nvim", requires = "MunifTanjim/nui.nvim" })
+
+	-- TODO: playgrpound
+	--use "/Users/luiz.ferreira/go/work/src/github.com/lferreira/drinkwater.nvim"
 
 	if packer_bootstrap then
 		require("packer").sync()

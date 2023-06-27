@@ -20,6 +20,9 @@ brew 'bash-completion2'
 
 brew 'zsh'
 
+# direnv
+brew 'direnv'
+
 # Install other useful binaries.
 brew 'git'
 brew 'git-lfs'

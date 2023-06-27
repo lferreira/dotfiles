@@ -14,15 +14,17 @@ if [ ! "$?" -eq 0 ] ; then
 	fi
 fi
 
+# runs brew doctor
 brew doctor
 
 # installing xcode
 xcode-select --install
 
+# updates brew
 brew update
 
 # installing git
-brew install git
+brew install git to clone dotfiles
 
 cd "$(dirname "${BASH_SOURCE}")";
 
@@ -34,8 +36,17 @@ rsync -vt ~/.dotfiles/.* ~/
 # creates an .config directory
 mkdir ~/.config
 
-# creates a symbolyc link with ~/.config/brewfile/
+# creates a symbolyc link to ~/.config/brewfile/
 ln -s ~/.dotfiles/brewfile ~/.config/brewfile
+
+# creates a symbolyc link to ~/.tmux.conf
+ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
+
+# creates a symbolyc link to ~/.tmux
+ln -s ~/.dotfiles/tmux ~/.tmux
+
+# create a symbolyc link to ~/.tmate.conf
+ln -s ~/.dotfiles/tmate/.tmate.conf ~/.tmate.conf
 
 echo "Running Brew ..."
 

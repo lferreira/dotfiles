@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![screenshot](https://github.com/lferreira/dotfiles/assets/966489/ccfbd7f0-bfa5-42a1-a7c3-78f9da30dcde)
+![howitlookslike](https://github.com/lferreira/dotfiles/assets/966489/a3d631d6-8d0c-424a-969c-97c4f26190bc)
 
 ## Requirements
 
@@ -13,8 +13,6 @@
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ## Luiz's dotfiles
-
-![howitlookslike](https://github.com/lferreira/dotfiles/assets/966489/a3d631d6-8d0c-424a-969c-97c4f26190bc)
 
 Warning: If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
 

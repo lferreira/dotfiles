@@ -1,2 +1,3 @@
 .DS_Store
 tmux/plugins/*
+tmux/projects_dirs

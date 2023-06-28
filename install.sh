@@ -39,14 +39,14 @@ mkdir ~/.config
 # creates a symbolyc link to ~/.config/brewfile/
 ln -s ~/.dotfiles/brewfile ~/.config/brewfile
 
-# creates a symbolyc link to ~/.tmux.conf
-ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
+# creates a symbolyc link to ~/.config/nvim
+ln -s ~/.dotfiles/nvim ~/.config/nvim
 
-# creates a symbolyc link to ~/.tmux
-ln -s ~/.dotfiles/tmux ~/.tmux
+# creates a symbolyc link to ~/.config/tmux
+ln -s ~/.dotfiles/tmux ~/.config/tmux
 
-# create a symbolyc link to ~/.tmate.conf
-ln -s ~/.dotfiles/tmate/.tmate.conf ~/.tmate.conf
+# create a symbolyc link to ~/.config/tmate
+ln -s ~/.dotfiles/tmate ~/.config/tmate
 
 echo "Running Brew ..."
 
@@ -56,9 +56,11 @@ if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
   chsh -s /usr/local/bin/bash;
 fi;
 
-cd ~/.config/brewfile/
-
 brew bundle install
+
+# fixes backspace on Apple M1 Pro OSX 12.x
+$(brew --prefix)/opt/ncurses/bin/infocmp tmux-256color > ~/tmux-256color.info                                                                                                                             eks-prod
+tic -xe tmux-256color ~/tmux-256color.info
 
 chsh -s /bin/zsh
 
@@ -70,9 +72,6 @@ zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binsc
 
 # install tmux package manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-# creates a symbolyc link with ~/.config/nvim
-ln -s ~/.dotfiles/nvim ~/.config/nvim
 
 # golang dependencies for cmp/lsp
 go install github.com/incu6us/goimports-reviser/v3@latest

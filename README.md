@@ -6,12 +6,15 @@
 
 ## Requirements
 
+- [Alacritty](https://github.com/jwilm/alacritty)
 - [Neovim 0.8+](https://github.com/neovim/neovim/releases/tag/v0.8.1)
 - [packer.nvim](https://github.com/wbthomason/packer.nvim)
 - [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ## Luiz's dotfiles
+
+![howitlookslike](https://github.com/lferreira/dotfiles/assets/966489/a3d631d6-8d0c-424a-969c-97c4f26190bc)
 
 Warning: If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
 

@@ -83,3 +83,14 @@ vim +PlugInstall +qall
 
 echo "Installing Neovim plugins ..."
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+
+# install password store
+git clone git@github.com:lferreira/pwd-store.git .password-store
+git clone git@github.com:lferreira/pwd-keys.git
+
+gpg --import ~/pwd-keys/private.pgp
+gpg --import ~/pwd-keys/public.pgp
+rm -rf ~/pwd-keys
+
+# allow changes on the new machine - adds trust|5|save
+gpg --edit-key luizhgferreira@gmail.com

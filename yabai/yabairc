@@ -13,7 +13,7 @@
 
 # global settings
 yabai -m config                                 \
-    mouse_follows_focus          off            \
+    mouse_follows_focus          on             \
     focus_follows_mouse          off            \
     window_origin_display        default        \
     window_placement             second_child   \
@@ -43,9 +43,13 @@ yabai -m config                                 \
     right_padding                12             \
     window_gap                   12             \
     layout                       bsp            \
-    mouse_modifier               fn             \
+    mouse_modifier               alt            \
     mouse_action1                move           \
     mouse_action2                resize         \
     mouse_drop_action            swap
+
+# disable specific apps
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
 
 echo "yabai configuration loaded.."

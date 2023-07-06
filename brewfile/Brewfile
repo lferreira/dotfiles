@@ -282,6 +282,10 @@ brew 'sfnt2woff-zopfli'
 
 tap 'fluxcd/tap'
 
+tap 'koekeishiya/formulae'
+brew 'skhd'
+brew 'yabai'
+
 tap 'rcmdnk/file'
 brew 'brew-file'
 

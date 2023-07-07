@@ -4,7 +4,7 @@
 
 set -ou pipefail
 
-cd ~/.password-store && git pull --rebase &> /dev/null
+cd ~/.password-store && pass git pull  &> /dev/null
 
 export FZF_DEFAULT_OPTS='
      --height 100%

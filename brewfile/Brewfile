@@ -272,6 +272,7 @@ brew 'zsh'
 brew 'zstd'
 
 tap 'homebrew/cask'
+cask 'alacritty'
 cask 'docker'
 cask 'ngrok'
 cask 'shifty'

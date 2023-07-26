@@ -873,7 +873,9 @@ key_bindings:
   # - { key: W,              mods: Command,                    action: Quit                  }
   # - { key: N,              mods: Command,                    action: SpawnNewInstance      }
   - { key: F, mods: Command|Control, action: ToggleSimpleFullscreen }
-  # - { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
+  - { key: G, mods: Command, chars: "\x02\x67" }
+  - { key: W, mods: Command, chars: "\x02\x77" }
+  - { key: P, mods: Command, chars: "\x02\x50" }
   # - { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
 # debug:
 # Display the time it takes to redraw each frame.

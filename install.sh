@@ -14,6 +14,9 @@ if [ ! "$?" -eq 0 ] ; then
 	fi
 fi
 
+# install gnupg
+brew install gnupg gnupg2
+
 # runs brew doctor
 brew doctor
 

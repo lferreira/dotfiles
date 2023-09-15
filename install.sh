@@ -100,7 +100,7 @@ if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
   chsh -s /usr/local/bin/bash;
 fi;
 
-brew bundle install
+cd ~/.config/brewfile && brew bundle install
 
 # fixes backspace on Apple M1 Pro OSX 12.x
 $(brew --prefix)/opt/ncurses/bin/infocmp tmux-256color > ~/tmux-256color.info                                                                                                                             eks-prod

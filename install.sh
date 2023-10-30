@@ -6,9 +6,7 @@
 which brew 1>&/dev/null
 if [ ! "$?" -eq 0 ] ; then
 	echo_with_prompt "Homebrew not installed. Attempting to install Homebrew"
-	/usr/bin/ruby -e "$(curl -o brewinstall.sh -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-	chmod 755 ./brewinstall.sh
-	rm -f brewinstall
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	if [ ! "$?" -eq 0 ] ; then
 		echo_with_prompt "Something went wrong. Exiting..." && exit 1
 	fi
@@ -66,7 +64,7 @@ gpg --edit-key luizhgferreira@gmail.com
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-git clone git@github.com:lferreira/dotfiles.git ~/.dotfiles && cd ~/.dotfiles || exit
+rm -rf ~/.dotfiles && git clone git@github.com:lferreira/dotfiles.git ~/.dotfiles && cd ~/.dotfiles || exit
 
 # copying .files
 rsync -vt ~/.dotfiles/.* ~/
@@ -103,7 +101,7 @@ fi;
 cd ~/.config/brewfile && brew bundle install
 
 # fixes backspace on Apple M1 Pro OSX 12.x
-$(brew --prefix)/opt/ncurses/bin/infocmp tmux-256color > ~/tmux-256color.info                                                                                                                             eks-prod
+$(brew --prefix)/opt/ncurses/bin/infocmp tmux-256color > ~/tmux-256color.info
 tic -xe tmux-256color ~/tmux-256color.info
 
 chsh -s /bin/zsh

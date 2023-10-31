@@ -6,7 +6,7 @@
 which brew 1>&/dev/null
 if [ ! "$?" -eq 0 ] ; then
 	echo_with_prompt "Homebrew not installed. Attempting to install Homebrew"
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	export HOMEBREW_NO_INSTALL_FROM_API=1 && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 	if [ ! "$?" -eq 0 ] ; then
 		echo_with_prompt "Something went wrong. Exiting..." && exit 1
 	fi

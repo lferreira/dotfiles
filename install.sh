@@ -12,9 +12,6 @@ if [ ! "$?" -eq 0 ] ; then
 	fi
 fi
 
-# install gnupg
-brew install gnupg gnupg2
-
 # runs brew doctor
 brew doctor
 
@@ -24,8 +21,40 @@ xcode-select --install
 # updates brew
 brew update
 
-# installing git
-brew install git
+# copying .files
+rm -rf ~/.dotfiles && git clone git@github.com:lferreira/dotfiles.git ~/.dotfiles && cd ~/.dotfiles || exit
+rsync -vt ~/.dotfiles/.* ~/
+
+# creates an .config directory
+mkdir ~/.config
+
+# creates a symbolyc link to ~/.config/brewfile/
+ln -s ~/.dotfiles/brewfile ~/.config/brewfile
+
+# creates a symbolyc link to ~/.config/nvim
+ln -s ~/.dotfiles/nvim ~/.config/nvim
+
+# creates a symbolyc link to ~/.config/tmux
+ln -s ~/.dotfiles/tmux ~/.config/tmux
+
+# create a symbolyc link to ~/.config/tmate
+ln -s ~/.dotfiles/tmate ~/.config/tmate
+
+# create a symbolyc link to ~/.config/skhd
+ln -s ~/.dotfiles/skhd ~/.config/skhd
+
+# create a symbolyc link to ~/.config/yabai
+ln -s ~/.dotfiles/skhd ~/.config/yabai
+
+echo "Running Brew ..."
+
+## Switch to using brew-installed bash as default shell
+if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
+  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
+  chsh -s /usr/local/bin/bash;
+fi;
+
+cd ~/.config/brewfile && brew bundle install
 
 # install password store
 git clone git@github.com:lferreira/pwd-store.git ~/.password-store
@@ -64,41 +93,6 @@ gpg --edit-key luizhgferreira@gmail.com
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-rm -rf ~/.dotfiles && git clone git@github.com:lferreira/dotfiles.git ~/.dotfiles && cd ~/.dotfiles || exit
-
-# copying .files
-rsync -vt ~/.dotfiles/.* ~/
-
-# creates an .config directory
-mkdir ~/.config
-
-# creates a symbolyc link to ~/.config/brewfile/
-ln -s ~/.dotfiles/brewfile ~/.config/brewfile
-
-# creates a symbolyc link to ~/.config/nvim
-ln -s ~/.dotfiles/nvim ~/.config/nvim
-
-# creates a symbolyc link to ~/.config/tmux
-ln -s ~/.dotfiles/tmux ~/.config/tmux
-
-# create a symbolyc link to ~/.config/tmate
-ln -s ~/.dotfiles/tmate ~/.config/tmate
-
-# create a symbolyc link to ~/.config/skhd
-ln -s ~/.dotfiles/skhd ~/.config/skhd
-
-# create a symbolyc link to ~/.config/yabai
-ln -s ~/.dotfiles/skhd ~/.config/yabai
-
-echo "Running Brew ..."
-
-## Switch to using brew-installed bash as default shell
-if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
-  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
-  chsh -s /usr/local/bin/bash;
-fi;
-
-cd ~/.config/brewfile && brew bundle install
 
 # fixes backspace on Apple M1 Pro OSX 12.x
 $(brew --prefix)/opt/ncurses/bin/infocmp tmux-256color > ~/tmux-256color.info

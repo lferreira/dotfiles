@@ -24,15 +24,9 @@ if [[ $session_name == "" ]]; then
   exit 0;
 fi
 
-
-#tmux split-window -v -l 10
-
-#tmux send-keys -t 0 nvim Enter '+NvimTreeToggle' Enter
-
 tmux switch-client -t "$session_name"
 
-#open_golang
-
+#WIP: open_golang
 function is_golang_project() {
 	if [  -f "go.mod" ] || [ ls "*.go" &> /dev/null ]; then
 		true
@@ -42,20 +36,8 @@ function is_golang_project() {
 }
 
 function open_golang() {
-#	tmux new-window -t "$session_name:0" -n "nvim"
-#	tmux new-window -t "$session_name:9" -n "golang"
-#	tmux new-window -t "$session_name:8" -n "terminal"
-#
-#
-#	tmux split-window -v
-#	tmux select-pane -L
-#
 	tmux send-keys -t "$session_name" C-z 'nvim' Enter \;
-#	tmux send-keys -t "$session_name" <C-b>s ;
-#
-#	tmux select-window -t "session_name:0"
-#	tmux -2 attach-session -t "session_name:0"
-
 }
 
+# WIP
 #if is_golang_project; then echo "is"; else echo "no"; fi

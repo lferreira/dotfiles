@@ -106,9 +106,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 # installing gvm - golang version manager
 zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 
-# install tmux package manager
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
 # golang dependencies for cmp/lsp
 go install github.com/incu6us/goimports-reviser/v3@latest
 go install mvdan.cc/gofumpt@latest

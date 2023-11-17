@@ -135,6 +135,16 @@ return packer.startup(function(use)
 	-- pomodoro
 	use({ "wthollingsworth/pomodoro.nvim", requires = "MunifTanjim/nui.nvim" })
 
+	-- markdown preview
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
+
 	-- TODO: playgrpound
 	--use "/Users/luiz.ferreira/go/work/src/github.com/lferreira/drinkwater.nvim"
 

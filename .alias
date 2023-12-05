@@ -1,5 +1,7 @@
 alias kcx=kubectx
 alias kcl=kubectl
+alias kns=kubens
+alias tf=terraform
 alias ggrep='_ggrep(){ git grep "$@" -- . :\!vendor;}; _ggrep'
 alias sbp='source ~/.bash_profile'
 alias goplay='open https://go.dev/play/'

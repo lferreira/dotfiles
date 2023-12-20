@@ -3,7 +3,7 @@ require("go").setup({
 	notify = false,
 	-- auto commands
 	auto_format = true,
-	auto_lint = true,
+	auto_lint = false,
 	-- linters: revive, errcheck, staticcheck, golangci-lint
 	linter = "revive",
 	-- linter_flags: e.g., {revive = {'-config', '/path/to/config.yml'}}

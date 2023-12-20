@@ -43,7 +43,7 @@ util = require("lspconfig/util")
 lspconfig.gopls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-	cmd = { "gopls", "serve" },
+	cmd = { "gopls", "serve", "golangci-lint" },
 	filetypes = { "go", "gomod" },
 	root_dir = util.root_pattern("go.work", "go.mod", ".git"),
 	settings = {
@@ -51,7 +51,7 @@ lspconfig.gopls.setup({
 			analyses = {
 				unusedparams = true,
 			},
-			staticcheck = true,
+			staticcheck = false,
 		},
 	},
 })

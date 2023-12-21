@@ -22,11 +22,26 @@ Warning: If you want to give these dotfiles a try, you should first fork this re
 cd; curl -L https://github.com/lferreira/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,.osx,LICENSE-MIT.txt}
 ```
 
-### How to install
+### How to install the environment
 
 ```
 make osx/install
 ```
+
+### How to isntall password-manager
+
+```
+make osx/install/password-manager
+```
+
+this is not gonna work for you =P but if you want to have
+someting similar I have two private repos:
+
+pwd-store: gpg encrypted structured files related to my credentials
+pwd-key: pgp private/public keys
+
+So basically I store them on my github and I have a shortcut on my terminal to xcopy them when
+it's necessary.
 
 ### Add custom commands without creating a new fork
 

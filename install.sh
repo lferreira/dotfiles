@@ -28,23 +28,26 @@ rsync -vt ~/.dotfiles/.* ~/
 # creates an .config directory
 mkdir ~/.config
 
-# creates a symbolyc link to ~/.config/brewfile/
+# creates a symbolic link to ~/.config/brewfile/
 ln -s ~/.dotfiles/brewfile ~/.config/brewfile
 
-# creates a symbolyc link to ~/.config/nvim
+# creates a symbolic link to ~/.config/nvim
 ln -s ~/.dotfiles/nvim ~/.config/nvim
 
-# creates a symbolyc link to ~/.config/tmux
+# creates a symbolic link to ~/.config/tmux
 ln -s ~/.dotfiles/tmux ~/.config/tmux
 
-# create a symbolyc link to ~/.config/tmate
+# create a symbolic link to ~/.config/tmate
 ln -s ~/.dotfiles/tmate ~/.config/tmate
 
-# create a symbolyc link to ~/.config/skhd
+# create a symbolic link to ~/.config/skhd
 ln -s ~/.dotfiles/skhd ~/.config/skhd
 
-# create a symbolyc link to ~/.config/yabai
-ln -s ~/.dotfiles/skhd ~/.config/yabai
+# create a symbolic link to ~/.config/yabai
+ln -s ~/.dotfiles/yabai ~/.config/yabai
+
+# create a symbolic link to ~/.config/alacritty
+ln -s ~/.dotfiles/alacritty ~/.config/alacritty
 
 echo "Running Brew ..."
 

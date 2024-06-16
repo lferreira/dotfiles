@@ -1,0 +1,121 @@
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[colors.bright]
+black = "#4c566a"
+blue = "#81a1c1"
+cyan = "#8fbcbb"
+green = "#a3be8c"
+magenta = "#b48ead"
+red = "#bf616a"
+white = "#eceff4"
+yellow = "#ebcb8b"
+
+[colors.cursor]
+cursor = "#d8dee9"
+text = "#2e3440"
+
+[colors.dim]
+black = "#373e4d"
+blue = "#68809a"
+cyan = "#6d96a5"
+green = "#809575"
+magenta = "#8c738c"
+red = "#94545d"
+white = "#aeb3bb"
+yellow = "#b29e75"
+
+[colors.normal]
+black = "#3b4252"
+blue = "#81a1c1"
+cyan = "#88c0d0"
+green = "#a3be8c"
+magenta = "#b48ead"
+red = "#bf616a"
+white = "#e5e9f0"
+yellow = "#ebcb8b"
+
+[colors.primary]
+background = "#2e3440"
+dim_foreground = "#a5abb6"
+foreground = "#d8dee9"
+
+[colors.search.matches]
+background = "#88c0d0"
+foreground = "CellBackground"
+
+[colors.selection]
+background = "#4c566a"
+text = "CellForeground"
+
+[colors.vi_mode_cursor]
+cursor = "#d8dee9"
+text = "#2e3440"
+
+[cursor]
+unfocused_hollow = true
+vi_mode_style = "Underline"
+
+[cursor.style]
+shape = "Block"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "GoMono Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "GoMono Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "GoMono Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "GoMono Nerd Font"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "ToggleSimpleFullscreen"
+key = "F"
+mods = "Command|Control"
+
+[[keyboard.bindings]]
+chars = "\u0002g"
+key = "G"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002w"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002P"
+key = "P"
+mods = "Command"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[window]
+decorations = "none"
+dynamic_padding = false
+dynamic_title = true
+option_as_alt = "Both"
+startup_mode = "Windowed"
+
+[window.padding]
+x = 10
+y = 10

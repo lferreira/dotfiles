@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#
+# generates a strong password using pwgen
+
+set -ou pipefail
+
+pwgen -c -n -y -s -B 20 1 | pbcopy

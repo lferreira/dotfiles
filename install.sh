@@ -28,25 +28,26 @@ rsync -vt ~/.dotfiles/.* ~/
 # creates an .config directory
 mkdir ~/.config
 
-# creates a symbolic link to ~/.config/brewfile/
-ln -s ~/.dotfiles/brewfile ~/.config/brewfile
+# symbolic links
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/.alias ~/.alias
+ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
+ln -s ~/.dotfiles/.extras ~/.extras
+ln -s ~/.dotfiles/.exports ~/.exports
 
-# creates a symbolic link to ~/.config/nvim
+ln -s ~/.dotfiles/brewfile ~/.config/brewfile
+ln -s ~/.dotfiles/brewfile/Brewfile ~/.config/brewfile/Brewfile
+
 ln -s ~/.dotfiles/nvim ~/.config/nvim
 
-# creates a symbolic link to ~/.config/tmux
 ln -s ~/.dotfiles/tmux ~/.config/tmux
 
-# create a symbolic link to ~/.config/tmate
 ln -s ~/.dotfiles/tmate ~/.config/tmate
 
-# create a symbolic link to ~/.config/skhd
 ln -s ~/.dotfiles/skhd ~/.config/skhd
 
-# create a symbolic link to ~/.config/yabai
 ln -s ~/.dotfiles/yabai ~/.config/yabai
 
-# create a symbolic link to ~/.config/alacritty
 ln -s ~/.dotfiles/alacritty ~/.config/alacritty
 
 echo "Running Brew ..."
@@ -57,7 +58,7 @@ if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
   chsh -s /usr/local/bin/bash;
 fi;
 
-cd ~/.config/brewfile && brew bundle install
+brew bundle install
 
 cd "$(dirname "${BASH_SOURCE}")";
 

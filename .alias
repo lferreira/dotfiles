@@ -6,6 +6,19 @@ alias ggrep='_ggrep(){ git grep "$@" -- . :\!vendor;}; _ggrep'
 alias sbp='source ~/.bash_profile'
 alias goplay='open https://go.dev/play/'
 
+alias newbrew='
+newbrew() {
+  local dump_commands=("install" "uninstall") # Include all commands that should do a brew dump
+  local main_command="${1}"
+
+  brew ${@}
+
+  for command in "${dump_commands[@]}"; do
+    [[ "${command}" == "${main_command}" ]] && brew bundle dump --file="~/.config/brewfile/Brewfile" --force
+  done
+}
+'
+
 # This should be the last line of the file
 # For local changes
 # Don't make edits below this

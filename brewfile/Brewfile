@@ -5,9 +5,6 @@ tap 'homebrew/core'
 brew 'ack'
 brew 'adns'
 brew 'adwaita-icon-theme'
-brew 'ant'
-brew 'aom'
-brew 'atk'
 brew 'autoconf'
 brew 'automake'
 brew 'bash'
@@ -175,13 +172,10 @@ brew 'nvm'
 brew 'oniguruma'
 brew 'openblas'
 brew 'openexr'
-brew 'openjdk@11'
-brew 'openjdk@8'
 brew 'openjpeg'
 brew 'openssh'
 brew 'openssl@1.1'
 brew 'openssl@3'
-brew 'p11-kit'
 brew 'p7zip'
 brew 'pandoc'
 brew 'pango'
@@ -201,9 +195,6 @@ brew 'protobuf'
 brew 'protobuf@21'
 brew 'pv'
 brew 'python@3.10'
-brew 'python@3.11'
-brew 'python@3.8'
-brew 'python@3.9'
 brew 'pyyaml'
 brew 'pwgen'
 brew 'qrencode'
@@ -297,9 +288,9 @@ tap 'versent/taps'
 tap 'xwmx/taps'
 
 # App Store applications
-mas 'GarageBand (10.4.8)', id: 682658836
-mas 'iMovie (10.3.6)', id: 408981434
-mas 'Keynote (13.1)', id: 409183694
-mas 'Numbers (13.1)', id: 409203825
-mas 'Pages (13.1)', id: 409201541
-mas 'RAR Extractor (10.5.0)', id: 1521938791
+#mas 'GarageBand (10.4.8)', id: 682658836
+#mas 'iMovie (10.3.6)', id: 408981434
+#mas 'Keynote (13.1)', id: 409183694
+#mas 'Numbers (13.1)', id: 409203825
+#mas 'Pages (13.1)', id: 409201541
+#mas 'RAR Extractor (10.5.0)', id: 1521938791

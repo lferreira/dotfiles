@@ -12,8 +12,7 @@ if [ ! "$?" -eq 0 ] ; then
 	fi
 fi
 
-# runs brew doctor
-brew doctor
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # installing xcode
 xcode-select --install
@@ -22,8 +21,7 @@ xcode-select --install
 brew update
 
 # copying .files
-rm -rf ~/.dotfiles && git clone git@github.com:lferreira/dotfiles.git ~/.dotfiles && cd ~/.dotfiles || exit
-rsync -vt ~/.dotfiles/.* ~/
+git clone git@github.com:lferreira/dotfiles.git ~/.dotfiles && cd ~/.dotfiles || exit
 
 # creates an .config directory
 mkdir ~/.config

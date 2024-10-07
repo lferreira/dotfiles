@@ -21,7 +21,7 @@ xcode-select --install
 brew update
 
 # copying .files
-git clone git@github.com:lferreira/dotfiles.git ~/.dotfiles && cd ~/.dotfiles || exit
+#git clone git@github.com:lferreira/dotfiles.git ~/.dotfiles && cd ~/.dotfiles || exit
 
 # creates an .config directory
 mkdir ~/.config

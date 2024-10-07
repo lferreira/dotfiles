@@ -265,7 +265,6 @@ cask 'shifty'
 
 tap 'homebrew/bundle'
 
-tap 'homebrew/cask-fonts'
 cask 'font-go-mono-nerd-font'
 
 tap 'homebrew/services'
@@ -275,11 +274,10 @@ brew 'sfnt2woff'
 brew 'sfnt2woff-zopfli'
 
 tap 'koekeishiya/formulae'
-brew 'skhd'
-brew 'yabai'
+brew 'koekeishiya/formulae/skhd'
+brew 'koekeishiya/formulae/yabai'
 
 tap 'rcmdnk/file'
-brew 'brew-file'
 
 tap 'vektra/tap'
 

@@ -14,3 +14,5 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+
+eval "$(/opt/homebrew/bin/brew shellenv)"

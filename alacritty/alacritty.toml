@@ -110,7 +110,7 @@ save_to_clipboard = true
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
 [window]
-decorations = "none"
+decorations = "None"
 dynamic_padding = false
 dynamic_title = true
 option_as_alt = "Both"

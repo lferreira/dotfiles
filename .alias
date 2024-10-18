@@ -18,6 +18,31 @@ newbrew() {
   done
 }
 '
+gvf() {
+    if [ $# -ne 1 ]; then
+        echo "Usage: gvf <field_name>"
+        return 1
+    fi
+
+    field_name="$1"
+
+    # Read the input from stdin (YAML or JSON)
+    secret_value=$(cat | yq eval -o=json - | jq -r ".data[\"$field_name\"]")  # Use yq and jq to extract the field value
+
+    if [ -z "$secret_value" ]; then
+        echo "Field '$field_name' not found in the input."
+        return 1
+    fi
+
+    # Decode the Base64 value and copy to clipboard
+    echo "$secret_value" | base64 --decode | pbcopy  # Change pbcopy to xclip or clip as needed
+
+    if [ $? -eq 0 ]; then
+        echo "Decoded value of '$field_name' copied to clipboard."
+    else
+        echo "Failed to decode the value."
+    fi
+}
 
 # This should be the last line of the file
 # For local changes

@@ -77,7 +77,7 @@ go install github.com/incu6us/goimports-reviser/v3@latest
 go install mvdan.cc/gofumpt@latest
 go install github.com/segmentio/golines@latest
 go install golang.org/x/tools/gopls@latest
-
+go install golang.org/x/tools/gopls@latest
 vim +PlugInstall +qall
 
 echo "Installing Neovim plugins ..."

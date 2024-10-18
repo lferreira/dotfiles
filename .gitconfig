@@ -81,10 +81,12 @@
 [fetch]
     prune = true
 
-[user]
-	name = luiz.ferreira
-	email = luizhgferreira@gmail.com
 [gpg]
 	program = /usr/local/bin/gpg
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[url "git@gitlab.semrush.net:"]
+        insteadOf = https://gitlab.semrush.net/
+[user]
+	name = luiz.ferreira
+	email = luizhgferreira@gmail.com

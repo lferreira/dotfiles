@@ -14,39 +14,21 @@ fi
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# copying .files
+#git clone git@github.com:lferreira/dotfiles.git ~/.dotfiles && cd ~/.dotfiles || exit
+
 # installing xcode
 xcode-select --install
 
 # updates brew
 brew update
 
-# copying .files
-#git clone git@github.com:lferreira/dotfiles.git ~/.dotfiles && cd ~/.dotfiles || exit
+# dependency to create symlinks
+brew install stow
 
 # creates an .config directory
-mkdir ~/.config
-
-# symbolic links
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
-ln -s ~/.dotfiles/.alias ~/.alias
-ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
-ln -s ~/.dotfiles/.extras ~/.extras
-ln -s ~/.dotfiles/.exports ~/.exports
-
-ln -s ~/.dotfiles/brewfile ~/.config/brewfile
-ln -s ~/.dotfiles/brewfile/Brewfile ~/.config/brewfile/Brewfile
-
-ln -s ~/.dotfiles/nvim ~/.config/nvim
-
-ln -s ~/.dotfiles/tmux ~/.config/tmux
-
-ln -s ~/.dotfiles/tmate ~/.config/tmate
-
-ln -s ~/.dotfiles/skhd ~/.config/skhd
-
-ln -s ~/.dotfiles/yabai ~/.config/yabai
-
-ln -s ~/.dotfiles/alacritty ~/.config/alacritty
+cd ~/.dotfiles && stow alias bash_profile env-golang exports extras zshrc
+mkdir -p ~/.config && stow -t ~/.config .config
 
 echo "Running Brew ..."
 
@@ -56,7 +38,7 @@ if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
   chsh -s /usr/local/bin/bash;
 fi;
 
-brew bundle install
+cd ~/.config/brewfile && brew bundle install
 
 cd "$(dirname "${BASH_SOURCE}")";
 

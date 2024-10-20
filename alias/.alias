@@ -1,0 +1,50 @@
+alias kcx=kubectx
+alias kcl=kubectl
+alias kns=kubens
+alias tf=terraform
+alias ggrep='_ggrep(){ git grep "$@" -- . :\!vendor;}; _ggrep'
+alias sbp='source ~/.bash_profile'
+alias goplay='open https://go.dev/play/'
+
+alias newbrew='
+newbrew() {
+  local dump_commands=("install" "uninstall") # Include all commands that should do a brew dump
+  local main_command="${1}"
+
+  brew ${@}
+
+  for command in "${dump_commands[@]}"; do
+    [[ "${command}" == "${main_command}" ]] && brew bundle dump --file="~/.config/brewfile/Brewfile" --force
+  done
+}
+'
+gvf() {
+    if [ $# -ne 1 ]; then
+        echo "Usage: gvf <field_name>"
+        return 1
+    fi
+
+    field_name="$1"
+
+    # Read the input from stdin (YAML or JSON)
+    secret_value=$(cat | yq eval -o=json - | jq -r ".data[\"$field_name\"]")  # Use yq and jq to extract the field value
+
+    if [ -z "$secret_value" ]; then
+        echo "Field '$field_name' not found in the input."
+        return 1
+    fi
+
+    # Decode the Base64 value and copy to clipboard
+    echo "$secret_value" | base64 --decode | pbcopy  # Change pbcopy to xclip or clip as needed
+
+    if [ $? -eq 0 ]; then
+        echo "Decoded value of '$field_name' copied to clipboard."
+    else
+        echo "Failed to decode the value."
+    fi
+}
+
+# This should be the last line of the file
+# For local changes
+# Don't make edits below this
+[ -f "$HOME/.alias.local" ] && source "$HOME/.alias.local"

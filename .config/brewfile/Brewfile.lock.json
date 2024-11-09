@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/core": {
-        "revision": "be395501ba8d4b90949bf32327176d0c345e13f9"
+        "revision": "191b64274ec60a7b20fd73317faf577a8618e8ef"
       },
       "homebrew/cask": {
         "revision": "bb8c003699148f6e56c494a71dc4103768347b3f"

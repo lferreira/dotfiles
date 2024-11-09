@@ -8,7 +8,7 @@ cd "$target_dir" || exit
 
 git pull --rebase  
 
-cd .config/brewfile
+cd $HOME/.config/brewfile
 
 brew update
 brew bundle install

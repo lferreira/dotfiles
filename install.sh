@@ -21,13 +21,13 @@ xcode-select --install
 brew update
 
 # stow
-stow ~/.dotfiles/zshrc
-stow ~/.dotfiles/alias
-stow ~/.dotfiles/bash_profile
-stow ~/.dotfiles/extras
-stow ~/.dotfiles/exports
+stow $HOME/.dotfiles/zshrc
+stow $HOME/.dotfiles/alias
+stow $HOME/.dotfiles/bash_profile
+stow $HOME/.dotfiles/extras
+stow $HOME/.dotfiles/exports
 
-stow --dotfiles ~/.dotfiles/config
+stow --dotfiles $HOME/.dotfiles/.config
 
 echo "Running Brew ..."
 
@@ -37,7 +37,7 @@ if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
   chsh -s /usr/local/bin/bash;
 fi;
 
-cd ~/.config/brewfile && brew bundle install
+cd $HOME/.config/brewfile && brew bundle install
 
 cd "$(dirname "${BASH_SOURCE}")";
 

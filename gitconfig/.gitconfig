@@ -83,8 +83,12 @@
 
 [gpg]
 	program = /usr/local/bin/gpg
+
 [url "git@github.com:"]
 	insteadOf = https://github.com/
-[user]
-	name = luiz.ferreira
-	email = luizhgferreira@gmail.com
+
+[includeIf "gitdir:~/.*lferreira/"]
+  path = ~/.gitconfig_personal
+
+[include]
+  path = ~/.gitconfig_work

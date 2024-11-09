@@ -27,6 +27,10 @@ stow $HOME/.dotfiles/bash_profile
 stow $HOME/.dotfiles/extras
 stow $HOME/.dotfiles/exports
 
+stow $HOME/.dotfiles/gitconfig
+stow $HOME/.dotfiles/gitconfig_work
+stow $HOME/.dotfiles/gitconfig_personal
+
 stow --dotfiles $HOME/.dotfiles/.config
 
 echo "Running Brew ..."

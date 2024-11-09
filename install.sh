@@ -20,33 +20,14 @@ xcode-select --install
 # updates brew
 brew update
 
-# copying .files
-#git clone git@github.com:lferreira/dotfiles.git ~/.dotfiles && cd ~/.dotfiles || exit
+# stow
+stow ~/.dotfiles/zshrc
+stow ~/.dotfiles/alias
+stow ~/.dotfiles/bash_profile
+stow ~/.dotfiles/extras
+stow ~/.dotfiles/exports
 
-# creates an .config directory
-mkdir ~/.config
-
-# symbolic links
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
-ln -s ~/.dotfiles/.alias ~/.alias
-ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
-ln -s ~/.dotfiles/.extras ~/.extras
-ln -s ~/.dotfiles/.exports ~/.exports
-
-ln -s ~/.dotfiles/brewfile ~/.config/brewfile
-ln -s ~/.dotfiles/brewfile/Brewfile ~/.config/brewfile/Brewfile
-
-ln -s ~/.dotfiles/nvim ~/.config/nvim
-
-ln -s ~/.dotfiles/tmux ~/.config/tmux
-
-ln -s ~/.dotfiles/tmate ~/.config/tmate
-
-ln -s ~/.dotfiles/skhd ~/.config/skhd
-
-ln -s ~/.dotfiles/yabai ~/.config/yabai
-
-ln -s ~/.dotfiles/alacritty ~/.config/alacritty
+stow --dotfiles ~/.dotfiles/config
 
 echo "Running Brew ..."
 
@@ -56,7 +37,7 @@ if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
   chsh -s /usr/local/bin/bash;
 fi;
 
-brew bundle install
+cd ~/.config/brewfile && brew bundle install
 
 cd "$(dirname "${BASH_SOURCE}")";
 

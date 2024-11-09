@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/core": {
-        "revision": "191b64274ec60a7b20fd73317faf577a8618e8ef"
+        "revision": "c2b4ea083d6bbf59a7f112167e15f8e31d27fed0"
       },
       "homebrew/cask": {
         "revision": "2565ee384e3370618c955a20ce87f31ab61869f2"
@@ -12343,6 +12343,55 @@
       "koekeishiya/formulae/yabai": {
         "version": "7.1.5",
         "bottle": false
+      },
+      "volta": {
+        "version": "2.0.1",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_sequoia": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/volta/blobs/sha256:c3f179ef8e08a6b9192a54f2c53104eb4e1633340b721cca0963b6b6428ba4f4",
+              "sha256": "c3f179ef8e08a6b9192a54f2c53104eb4e1633340b721cca0963b6b6428ba4f4"
+            },
+            "arm64_sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/volta/blobs/sha256:ccc458c5dce897081ef5647f3b7546b990156ff9d4ecf0e5e853ec3183ef6361",
+              "sha256": "ccc458c5dce897081ef5647f3b7546b990156ff9d4ecf0e5e853ec3183ef6361"
+            },
+            "arm64_ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/volta/blobs/sha256:564451a02fe6a260d6b6c6931dbf5a254d492dbc4e56986b1ff017395f51bb06",
+              "sha256": "564451a02fe6a260d6b6c6931dbf5a254d492dbc4e56986b1ff017395f51bb06"
+            },
+            "arm64_monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/volta/blobs/sha256:048b23b6a53de02c00868b733a5ac804daaf25490072327314a8564fff745a81",
+              "sha256": "048b23b6a53de02c00868b733a5ac804daaf25490072327314a8564fff745a81"
+            },
+            "sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/volta/blobs/sha256:4bb7faa360726cf19a4b0a8ba4ce500a5050ea63ddd990b5cafaef3f1d215ed5",
+              "sha256": "4bb7faa360726cf19a4b0a8ba4ce500a5050ea63ddd990b5cafaef3f1d215ed5"
+            },
+            "ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/volta/blobs/sha256:1a53b58df1edd4a2df65c0084e6736d16427ab786716972655ec0805391c3c5b",
+              "sha256": "1a53b58df1edd4a2df65c0084e6736d16427ab786716972655ec0805391c3c5b"
+            },
+            "monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/volta/blobs/sha256:5920d42606af034e79d64e9fcbfc019921ffa16f246d2d1840bfc02a83bef95d",
+              "sha256": "5920d42606af034e79d64e9fcbfc019921ffa16f246d2d1840bfc02a83bef95d"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/volta/blobs/sha256:1e50806022ce887eb58b2880aff109e3a0f0a63827d9bf8ea3c543287500230b",
+              "sha256": "1e50806022ce887eb58b2880aff109e3a0f0a63827d9bf8ea3c543287500230b"
+            }
+          }
+        }
       }
     },
     "cask": {

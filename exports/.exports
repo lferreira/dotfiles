@@ -35,6 +35,10 @@ export MANPAGER='less -X';
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty);
 
+export VOLTA_HOME="$HOME/.volta"
+
+export PATH="$VOLTA_HOME/bin:$PATH"
+
 # This should be the last line of the file
 # For local changes
 # Don't make edits below this

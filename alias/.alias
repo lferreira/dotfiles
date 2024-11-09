@@ -18,7 +18,14 @@ newbrew() {
   done
 }
 '
-gvf() {
+
+alias runtest='~/.dotfiles/scripts/select_test_task.sh'
+
+alias dotfiles-update="make -C ~/.dotfiles osx/update"
+
+# get value from a secret returned by kubectl get secret
+alias getsecret='
+getsecret() {
     if [ $# -ne 1 ]; then
         echo "Usage: gvf <field_name>"
         return 1
@@ -43,6 +50,7 @@ gvf() {
         echo "Failed to decode the value."
     fi
 }
+'
 
 # This should be the last line of the file
 # For local changes

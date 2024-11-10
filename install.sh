@@ -26,7 +26,9 @@ stow $HOME/.dotfiles/alias
 stow $HOME/.dotfiles/bash_profile
 stow $HOME/.dotfiles/extras
 stow $HOME/.dotfiles/exports
+stow $HOME/.dotfiles/inputrc
 
+stow $HOME/.dotfiles/gitignore_global
 stow $HOME/.dotfiles/gitconfig
 stow $HOME/.dotfiles/gitconfig_work
 stow $HOME/.dotfiles/gitconfig_personal

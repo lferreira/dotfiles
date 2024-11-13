@@ -90,5 +90,8 @@
 [includeIf "gitdir:~/.*lferreira/"]
   path = ~/.gitconfig_personal
 
+[includeIf "gitdir:~/.*dotfiles/"]
+  path = ~/.gitconfig_personal
+
 [include]
   path = ~/.gitconfig_work

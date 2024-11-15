@@ -24,9 +24,11 @@ brew update
 stow $HOME/.dotfiles/zshrc
 stow $HOME/.dotfiles/alias
 stow $HOME/.dotfiles/bash_profile
+stow $HOME/.dotfiles/env-golang
 stow $HOME/.dotfiles/extras
 stow $HOME/.dotfiles/exports
 stow $HOME/.dotfiles/inputrc
+stow $HOME/.dotfiles/hushlogin
 
 stow $HOME/.dotfiles/gitignore_global
 stow $HOME/.dotfiles/gitconfig

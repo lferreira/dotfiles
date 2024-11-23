@@ -17,25 +17,29 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # installing xcode
 xcode-select --install
 
-# updates brew
-brew update
-
 # stow
-stow $HOME/.dotfiles/zshrc
-stow $HOME/.dotfiles/alias
-stow $HOME/.dotfiles/bash_profile
-stow $HOME/.dotfiles/env-golang
-stow $HOME/.dotfiles/extras
-stow $HOME/.dotfiles/exports
-stow $HOME/.dotfiles/inputrc
-stow $HOME/.dotfiles/hushlogin
+cd $HOME/.dotfiles
 
-stow $HOME/.dotfiles/gitignore_global
-stow $HOME/.dotfiles/gitconfig
-stow $HOME/.dotfiles/gitconfig_work
-stow $HOME/.dotfiles/gitconfig_personal
+stow zshrc
+stow alias
+stow bash_profile
+stow env-golang
+stow extras
+stow exports
+stow inputrc
+stow hushlogin
+stow gitignore_global
+stow gitconfig
+stow gitconfig_work
+stow gitconfig_personal
 
-stow --dotfiles $HOME/.dotfiles/.config
+stow -t ~ alacritty
+stow -t ~ brewfile
+stow -t ~ nvim
+stow -t ~ skhd
+stow -t ~ tmate
+stow -t ~ tmux
+stow -t ~ yabai
 
 echo "Running Brew ..."
 
@@ -45,7 +49,7 @@ if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
   chsh -s /usr/local/bin/bash;
 fi;
 
-cd $HOME/.config/brewfile && brew bundle install
+cd $HOME/.config/brewfile && brew update && brew bundle install
 
 cd "$(dirname "${BASH_SOURCE}")";
 

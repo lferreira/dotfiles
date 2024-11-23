@@ -2,7 +2,7 @@
 
 # install password store
 git clone git@github.com:lferreira/pwd-store.git ~/.password-store
-git clone git@github.com:lferreira/pwd-keys.git
+git clone git@github.com:lferreira/pwd-keys.git ~/pwd-keys
 
 #  Remember to edit the private key gpg --edit-key <private-key>
 #  According to this post, OpenKeyChain doesn't suport AEAD encryption

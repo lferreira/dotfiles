@@ -93,5 +93,8 @@
 [includeIf "gitdir:~/.*dotfiles/"]
   path = ~/.gitconfig_personal
 
-[include]
-  path = ~/.gitconfig_work
+[url "git@gitlab.semrush.net:"]
+        insteadOf = https://gitlab.semrush.net/
+
+[includeIf "gitdir:~/go/work/gitlab.semrush.net/"]
+    path = ~/.gitconfig-work

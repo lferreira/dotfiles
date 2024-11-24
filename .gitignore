@@ -1,3 +1,8 @@
 .DS_Store
 tmux/plugins/*
+<<<<<<< HEAD
 *.*/tmux/projects_dirs
+=======
+tmux/projects_dirs
+.gitconfig-work
+>>>>>>> 18a4c81 (sync envs)

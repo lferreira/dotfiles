@@ -1,4 +1,4 @@
 .DS_Store
 tmux/plugins/*
-tmux/projects_dirs
+tmux/.config/tmux/projects_dirs
 gitconfig_work/.gitconfig_work

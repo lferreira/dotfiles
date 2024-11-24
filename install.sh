@@ -38,6 +38,8 @@ stow -t ~ brewfile
 stow -t ~ nvim
 stow -t ~ skhd
 stow -t ~ tmate
+
+touch tmux/.config/tmux/projects_dirs
 stow -t ~ tmux
 stow -t ~ yabai
 

@@ -18,10 +18,4 @@ export PATH="$HOME/bin:$PATH";
 eval "$(direnv hook zsh)"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
-<<<<<<< HEAD:bash_profile/.bash_profile
-eval "$(atuin init zsh)"
-=======
-
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
->>>>>>> 18a4c81 (sync envs):.bash_profile
+#eval "$(atuin init zsh)"

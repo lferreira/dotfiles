@@ -36,7 +36,6 @@ export MANPAGER='less -X';
 export GPG_TTY=$(tty);
 
 export VOLTA_HOME="$HOME/.volta"
-
 export PATH="$VOLTA_HOME/bin:$PATH"
 
 # This should be the last line of the file

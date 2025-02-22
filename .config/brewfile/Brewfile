@@ -263,6 +263,7 @@ cask 'alacritty'
 cask 'docker'
 cask 'ngrok'
 cask 'shifty'
+cask 'karabiner-elements'
 
 tap 'homebrew/bundle'
 

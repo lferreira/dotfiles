@@ -1,2 +1,12 @@
-$GOPATH/src/github.com/lferreira
-go/src/github.com/lferreira
+$GOPATH/gitlab.semrush.net/enterprise-solutions
+$GOPATH/gitlab.semrush.net/enterprise-solutions/platform-engineering
+$GOPATH/gitlab.semrush.net/enterprise-solutions/platform-engineering/platform-libraries
+$GOPATH/gitlab.semrush.net/enterprise-solutions/platform-engineering/platform-components
+$GOPATH/gitlab.semrush.net/enterprise-solutions/aurora-team
+$GOPATH/gitlab.semrush.net/securityteam/security-pipeline
+$GOPATH/gitlab.semrush.net/marketing-technology-team/enterprise-website
+$GOPATH/gitlab.semrush.net/azure-team
+$GOPATH/gitlab.semrush.net/gcp
+$GOPATH/gitlab.semrush.net/components
+$GOPATH/gitlab.semrush.net/sre
+$GOPATH/github.com/googleapis

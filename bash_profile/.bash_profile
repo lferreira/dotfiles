@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# Source bashrc if it exists
 if [ -s ~/.bashrc ]; then source ~/.bashrc; fi
 
 source ~/.gvm/scripts/gvm
@@ -16,4 +18,3 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/bin:$PATH";
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(atuin init zsh)"

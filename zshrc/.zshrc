@@ -1,8 +1,11 @@
+# Clean PATH configuration - Homebrew and user tools only (no Nix/Home Manager)
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/.volta/bin:$HOME/.rvm/bin:$HOME/go/work/bin"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-#export ZSH="~/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -104,3 +107,7 @@ PROMPT='$(kube_ps1)'$PROMPT
 alias vim="nvim"
 
 source ~/.bash_profile
+export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+[[ -s "/Users/luizferreira/.gvm/scripts/gvm" ]] && source "/Users/luizferreira/.gvm/scripts/gvm"
